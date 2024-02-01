@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/png" href="./img/logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="giftcard.html">GiftCard</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div>
+            <div class="header-icons">
+                <a class="user-icon"><i class='bx bx-user'></i></a>
+                <a class="cart-icon"><i class='bx bx-cart' ></i></a>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Curso SQL</p>
+                            <span class="precio-producto-carrito">$29.50</span>
+                        </div>
+                        <a class="icon-close"><i class='bx bx-x'></i></a>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$29.50</span>
+                </div>
+                <p class="cart-empty">Todavía no se obtuvieron cursos</p>
+            </div>
+        </div>
+        
+    </header>
+
+    <!--Home-->
+
+    <main>
+        <section class="home" id="home">
+            <div class="home-text">
+                <h6>La mejor página para aprender en línea</h6>
+                <h1>Cursos Con Los Precios Más Accesibles</h1>
+                <p>Aprende en línea facilmente</p>
+                <div class="contenedor-form">
+                    <form>
+                        <input class="buscar-cursos" id="buscar" type="search" placeholder="Buscar cursos">
+                        <input class="boton-buscar" type="submit" value="Buscar">
+                    </form>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="img/home.png">
+            </div>
+        </section>
+
+        <!--Caracteristicas-->
+        <section id="caracteristicas" class="caracteristicas">
+            <h1>CARACTERÍSTICAS</h1>
+            <h2>¿CÓMO APRENDES?</h2>
+            <p>Te damos las herramientas para crecer</p>
+            <div class="carac-base">
+                <div class="carac-box">
+                    <i class='bx bxs-like' ></i>
+                    <h3>Crea fácilmente</h3>
+                    <p>Adquiere el conocimiento necesario para convertir tus ideas en nuevos proyectos.</p>
+                </div>
+                <div class="carac-box">
+                    <i class='bx bx-transfer-alt' ></i>
+                    <h3>Comparte proyectos</h3>
+                    <p>Conecta con una comunidad de estudiantes y profesionales para potenciar tu aprendizaje.</p>
+                </div>
+                <div class="carac-box">
+                    <i class='bx bxs-analyse'></i>
+                    <h3>Transforma tus ideas</h3>
+                    <p>Genera impacto con grandes proyectos que cambien al mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Cursos-->
+        <section class="cursos" id="cursos">
+            <div class="text-center">
+                <h5>CURSOS</h5>
+                <h2>Cursos Destacados</h2>
+            </div>
+            <div class="container-cursos">
+                <div  class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div>
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div> 
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div>
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div>
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div>
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="fila">
+                    <img onclick="window.location.href='detalle-curso.html';" src="img/cursos/curso-SQL.jpg">
+                    <div class="text-cursos">
+                        <h5>$29.50</h5>
+                        <h3 onclick="window.location.href='detalle-curso.html';">Curso Completo De SQL 2023</h3>
+                        <h6>12hrs 23min</h6>
+                        <div class="valoracion">
+                            <div class="stars">
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star' ></i></a>
+                                <a href="#"><i class='bx bxs-star-half' ></i></a>
+                            </div>
+                        </div>
+                        <button class="boton-addCarro">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
+
+        <!--Medios de pago-->
+
+        <section class="pago">
+            <div class="text-center">
+                <h5>PAGÁ FÁCILMENTE</h5>
+                <h2>Nuestros Medios De Pago</h2>
+            </div>
+            <article class="formasPago">
+                <a href=""><img src="./img/formas de pago/cabal.png" alt=""></a>
+                <a href=""><img src="./img/formas de pago/mercadopago.png" alt=""></a>
+                <a href=""><img src="./img/formas de pago/maestro.png" alt=""></a>
+                <a href=""><img src="./img/formas de pago/mastercard.png" alt=""></a>
+                <a href=""><img src="./img/formas de pago/visa.png" alt=""></a>
+                <a href=""><img src="./img/formas de pago/rapipago.png" alt=""></a>
+            </article>
+        </section>
+    </main>
+    
+    <!--Footer-->
+    <footer>
+        <section class="footer" id="footer">
+            <div class="main-footer">
+                <article>
+                    <div class="container-footer">
+                        <a href="#" class="logo">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt' ></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook' ></i>Facebook</a></li>
+                        <li><a href="https://www.twitter.com/" target="_blank"><i class='bx bxl-twitter' ></i>Twitter</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="calendario.html">Calendario</a></li>
+                        <li><a href="giftcard.html">GiftCard</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><p>Programación Web I </p></li>
+                        <li><p>Facundo Agustin Varela</p></li>
+                        <li><p>favarela@alumno.unlam.edu.ar</p></li>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+</body>
+</html>

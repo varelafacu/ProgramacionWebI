@@ -1,0 +1,1113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+    color: #22100d;
+}
+
+/*Header*/
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 23px 13%;
+    transition: all .40s ease;
+}
+.logo img{
+    height: auto;
+    width: 50px;
+    max-width: 100%;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: #22100d;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 22px;
+    transition: all .40s ease;
+}
+.navbar a:hover{
+    color: #f66962;
+}
+.header-icons{
+    position: relative;
+}
+.header-icons i{
+    margin-left: 10px;
+    font-size: 24px;
+    color: #22100d;
+    transition: all .40s ease;
+    margin-right: 15px;
+}
+.header-icons i:hover{
+    color: #f66962; 
+}
+#menu-icon{
+    font-size: 34px;
+    color: #22100d;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+.user-icon i{
+    font-size: 32px;
+}
+/*Carrito*/
+.cart-icon i{
+    font-size: 35px;
+    cursor: pointer;
+}
+.count-products{
+    position: absolute;
+    top: 3%;
+    right: 15px;
+    background-color: #000;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: default;
+}
+#contador-productos{
+    font-size: 12px;
+}
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px;
+}
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 42px;
+}
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.icon-close{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    left: 9px;
+}
+.icon-close:hover{
+    color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+.hidden-cart{
+    display: none;
+}
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+
+
+
+/*Home*/
+section{
+    padding: 80px 13%;
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(../img/fondo.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+.home-text h1{
+    font-size: 61px;
+    margin: 15px 0 15px;
+    text-transform: uppercase;
+
+}
+.home-text h6{
+    color: #f66962;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.home-text p{
+    color: #685f78;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-left: 2px;
+}
+.contenedor-form form{
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+}
+form .buscar-cursos{
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    padding: 16px 140px 16px 15px;
+    border: 2px solid #f66962;
+    border-radius: 30px;
+}
+form .boton-buscar{
+    position: absolute;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: #f66962;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    top: 2px;
+    right: 1px;
+}
+form .boton-buscar:hover{
+    background: #22100d;
+    transform: scale(1.1);
+    font-weight: 700;
+}
+.home-img img{
+    height: auto;
+    width: 100%;
+}
+header.sticky{
+    background: #fff;
+    padding: 12px 13%;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+}
+
+/*Caracteristicas*/
+#caracteristicas{
+    padding: 100px 160px 0 160px;
+    text-align: center;
+}
+#caracteristicas h1{
+    color: #f66962;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+#caracteristicas h2{
+    font-size: 35px;
+    line-height: 1.2;
+}
+.carac-base{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5%;
+    margin-top: 50px;
+}
+.carac-box{
+    background: #f9f9ff;
+    text-align: start;
+    padding: 25px;
+}
+.carac-box i{
+    font-size: 37px;
+    color: #22100d;
+}
+.carac-box h3{
+    font-size: 19px;
+    font-weight: 600;
+    color: #22100d;
+    padding: 13px 0 7px 0;
+}
+.carac-box p{
+    font-size: 19px;
+    font-weight: 400;
+    color: #22100d;
+}
+
+/*Cursos*/
+
+.cursos{
+    background: url(../img/fondo.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+}
+.container-cursos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+    margin-top: 64px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.fila{
+    background: #fff;
+    padding: 4px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 40px #685f78;
+    transition: all .40s ease;
+    position: relative;
+}
+.fila:hover{
+    transform: translateY(-15px);
+}
+.fila img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.text-cursos{
+    padding: 15px 10px;
+}
+.text-cursos h5{
+    color: #fff;
+    background-color: #22100d;
+    line-height: 33px;
+    width: 85px;
+    height: 33px;
+    text-align: center;
+    border-radius: 12px 0 0px 12px;
+    position: absolute;
+    right: 4px;
+    bottom: 173px;
+}
+.text-cursos h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    margin: 15px 0 15px;
+    transition: all .40s ease;
+}
+.text-cursos h3:hover{
+    color: #f66962;
+}
+.text-cursos h6{
+    color: #696969;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.valoracion{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stars i{
+    color: #f66962;
+    margin-right: 2px;
+    font-size: 17px;
+}
+.text-cursos button{
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .40s ease;
+}
+.text-cursos button:hover{
+    background: #f66962;
+    transform: translateY(-2px);
+    font-weight: 700;
+}
+.text-center{
+    text-align: center;
+    padding: 100px 160px 0 160px;
+}
+.text-center h5{
+    color: #f66962;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.text-center h2{
+    font-size: 35px;
+    line-height: 1.2;
+}
+.main-boton{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+.boton{
+    display: inline-block;
+    padding: 16px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #f66962;
+    color: #fff;
+    border-radius: 30px;
+    transition: all .40s ease;
+}
+.boton:hover{
+    transform: scale(0.8) translateY(-5px);
+    background: #22100d;
+}
+
+
+/*Medios de Pago*/
+.formasPagoContenedor {
+    width: 100%;
+}
+.formasPago {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.formasPago img {
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/*Footer*/
+.footer{
+    padding: 60px 10%;
+    background: #000000;
+    opacity: 88%;
+}
+.main-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2%;
+}
+.container-footer img{
+    height: auto;
+    width: 50px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.container-footer li{
+    margin-bottom: 18px;
+}
+.container-footer li a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+}
+.container-footer li a:hover{
+    transform: translateX(10px);
+    color: #f66962;
+}
+.container-footer li a i{
+    position: relative;
+    padding: 2px 8px 0 0;
+    height: auto;
+}
+.container-footer li p{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+}
+.container-footer li p:hover{
+    color: #f66962;
+}
+
+
+/*DETALLES DE CURSO*/
+
+.detalle-curso{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8vw;
+}
+.detalle-curso h3{
+    padding: 35px 0 25px 0;
+    color: #22100d;
+}
+.detalle-curso p{
+    color: #685f78;
+    padding-top: 5px;
+}
+.detalle-curso .descr-docente p{
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #22100d;
+}
+.detalle-curso hr{
+    height: 1px;
+    background: rgba(104, 95, 120, 0.5);
+    margin-top: 40px;
+}
+.vista-gral{
+    width: 70%;
+}
+.vista-gral .img-curso{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.vista-gral .curso-head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.vista-gral .curso-head .curso-name{
+    width: 70%;
+}
+.vista-gral .curso-head .curso-name h2{
+    color: #22100d;
+}
+#detalle-curso .vista-gral .curso-head .curso-name .stars{
+    margin: 6px 0;
+}
+#detalle-curso .vista-gral .curso-head .curso-name .stars i{
+    font-size: 14px;
+}
+#detalle-curso .vista-gral .curso-head .curso-name p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #22100d;
+}
+#detalle-curso .vista-gral .curso-head span{
+    padding: 16px 22px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #22100d;
+}
+.docente{
+    display: flex;
+}
+.docente img{
+    width: 75px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+.docente h5{
+    font-size: 15px;
+    padding-top: 10px;
+}
+#detalle-curso .info-curso{
+    width: 300px;
+    padding: 0 30px 30px 30px;
+    border-radius: 11px;
+    box-shadow: 0px 20px 40px 0 #685f78;
+    background: #fff;
+}
+#detalle-curso .info-curso h3{
+    padding-bottom: 20px;
+}
+#detalle-curso .info-curso p{
+    font-size: 15px;
+    color: #685f78;
+    margin: 20px 0;
+}
+#detalle-curso .info-curso p i{
+    color: #f66962;
+    font-weight: 600;
+    margin-right: 18px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+#detalle-curso .info-curso .boton-inscribirme{
+    padding: 47px 0 20px 0;
+    margin: 0;
+    text-align: center;
+}
+#detalle-curso .info-curso .boton-inscribirme button{
+    text-decoration: none;
+    border: 0;
+    font-size: 13px;
+    padding: 13px 45px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    background: #f66962;
+    transition: all .40s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#detalle-curso .info-curso .boton-inscribirme button:hover{
+    background: #22100d;
+    transform: scale(1.1);
+}
+
+#page-detalle-curso .page-cursos{
+    margin-top: 70px;
+    background: url(../img/fondo-opacity.png);
+    background-size: cover;
+    background-position: center;
+}
+#page-detalle-curso .text-center{
+    text-align: center;
+    padding: 20px 160px 0 160px;
+}
+#page-detalle-curso .text-center h5{
+    color: #f66962;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+#page-detalle-curso .detalle-curso{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 5vw;
+}
+
+
+.cursos-similares {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+  
+.cursos-similares article {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    width: 50%;
+    border: 1px solid #000;
+    box-shadow: 0 5px 15px 0 #685f78;
+}
+  
+.cursos-similares .item{
+    height: 275px;
+}
+.cursos-similares .precio { 
+    display: inline;
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    background: #000;
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    position: relative;
+    bottom: 80px;
+    left: 141px;
+}
+  
+.cursos-similares .tituloProducto {
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 5px;
+    color: #252525;
+    text-align: center;
+    border-bottom: 1px rgba(136, 61, 155, 0.5) solid;
+}
+.filaProducto{
+    background-color: #fff;
+    padding: 4px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    position: relative;
+}
+.filaProducto:hover{
+    transform: translateY(-5px);
+}
+.filaProducto img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/*CONTACTO*/
+#contacto .text-center{
+    text-align: center;
+    padding: 130px 160px 0 160px;
+}
+.titulo-contacto{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 55px 20px 55px 35px;
+}
+.container-contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.form-contacto{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+}
+.inline{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.inline input{
+    margin-left: 20px;
+}
+#mail{
+    margin-left: 35px;
+}
+#comentarios{
+    padding: 5px 0;
+}
+.text-area{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+}
+.boton-enviar{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    background-color: #000;
+    transition: all 0.40s ease;
+    cursor: pointer;
+}
+.boton-enviar:hover{
+    background: #f66962;
+}
+#mapa{
+    padding: 0 18% 60px 18%;
+}
+.mapa{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    padding: 25px;
+    border-radius: 50px;
+}
+.datos-contacto{
+    width: 25%;
+}
+.datos-contacto h3{
+    padding-left: 15px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: end;
+    text-align: start;
+}
+.datos-contacto p{
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    text-align: start;
+}
+.datos-contacto p i{
+    font-weight: 600;
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+
+/*INSCRIPCION*/
+#inscripcion{
+    background: url(../img/fondo-opacity.png);
+    padding: 177px 5%;
+}
+#inscripcion .text-center{
+    text-align: start;
+}
+#inscripcion .text-center h2{
+    text-transform: uppercase;
+}
+#inscripcion .text-center h5{
+    font-weight: 600;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+#inscripcion .container-inscr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10% 10px 10%;
+}
+#formulario{
+    padding: 80px 10rem;
+}
+.container-inscr .form-inscr{
+    width: 90%;
+    padding-top: 20px;
+}
+.inscripcion form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: start;
+}
+.form-inscr input{
+    padding: 6px 50px 6px 3px;
+    border-radius: 4px;
+}
+.restar{
+    background: #f66962;
+    width: 30px;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .40s ease;
+    border: 0;
+}
+.restar:hover{
+    background: #22100d;
+    font-weight: 700;
+    transform: translateY(-2px);
+}
+.addPersona{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10rem;
+    width: 13%;
+    height: 13%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#add{
+    background: #f66962;
+    width: 30px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .40s ease;
+    border: 0;
+}
+#add:hover{
+    background: #22100d;
+    font-weight: 700;
+    transform: translateY(-2px);
+}
+
+.addPersona p{
+    display: block;
+    color: #f66962;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 13%;
+    text-transform: capitalize;
+    transition: all .40s ease;
+    margin-left: 5px;
+}
+.addPersona p:hover{
+    transform: translateY(-2px);
+}
+.addPersona p{
+    position: relative;
+    padding: 2px 8px 0 0;
+    height: auto;
+}
+
+.inscripcionPrecio{
+    display: flex;
+    margin: 10rem 10rem 0 10rem;
+    width: 13%;
+    height: 13%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inscripcionPrecio p{
+    color: #fff;
+    background-color: #22100d;
+    font-weight: 400;
+    line-height: 42px;
+    padding: 0 20px;
+    height: 42px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 10px;
+}
+.inscripcionPrecio input{
+    padding: 13px 45px;
+    border-radius: 5px;
+    color: #fff;
+    background: #f66962;
+    transition: all .40s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.inscripcionPrecio input:hover{
+    background: #22100d;
+    font-weight: 600;
+    transform: translateX(-2px);
+}
+
+.modal-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.inscripcionPrecio .open{
+    padding: 5px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: #f66962;
+    transition: all .40s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.modal-container button{
+    background: #f66962;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.modal-container button:hover{
+    background: #22100d;
+    font-weight: 600;
+}
+.modal{
+    background-color: #fff;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.modal input{
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*GIFTCARD*/
+.text-center{
+    text-align: center;
+    padding: 20px 160px 0 160px;
+    text-transform: uppercase;
+}
+.text-center h5{
+    color: #f66962;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.pag-giftcard{
+    display: flex;
+    justify-content: center;
+    padding: 80px 13%;
+    background: url(../img/fondo-opacity.png);
+    background-size: cover;
+    background-position: center;
+}
+.preview{
+    margin: 50px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 60%;
+    height: 20rem;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.box-preview{
+    font-size: 32px;
+}
+#valor{
+    align-self: end;
+    position: relative;
+    bottom: 3rem;
+}
+#precio{
+    color: #fff;
+    background: #22100d;
+    width: 6rem;
+    height: 21px;
+    border-radius: 3px;
+}
+#titulo{
+    font-size: 28px;
+}
+.edit{
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 50%;
+    height: 44rem;
+    border-radius: 12px;
+    box-shadow: 0px 20px 40px 0 #685f78;
+    background: #fff;
+}
+.edit h5{
+    padding-top: 60px;
+}
+#texto{
+    height: 2rem;
+    width: 80%;
+}
+#fondo{
+    height: 2rem;
+    width: 80%;
+    cursor: pointer;
+}
+#monto{
+    height: 2rem;
+    width: 60%;
+}
+label img{
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.btn-confirmar button{
+    width: 40%;
+    height: 2rem;
+    margin-top: 4rem;
+    border-radius: 6px;
+    background: #f66962;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all.40s ease;
+}
+.btn-confirmar button:hover{
+    background: #000;
+    transform: scaleY(1.2);
+}
+
+/*CALENDARIO*/
+.main-calendar{
+    padding: 80px 13%;
+    
+}
+#text-calendar{
+    margin-bottom: 4rem;
+}

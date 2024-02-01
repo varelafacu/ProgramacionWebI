@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/png" href="./img/logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>GiftCard</title>
+</head>
+<body>
+    
+    <!--Header-->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="giftcard.html">GiftCard</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div>
+            <div class="header-icons">
+                <a class="user-icon"><i class='bx bx-user'></i></a>
+                <a class="cart-icon"><i class='bx bx-cart' ></i></a>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Curso SQL</p>
+                            <span class="precio-producto-carrito">$29.50</span>
+                        </div>
+                        <a class="icon-close"><i class='bx bx-x'></i></a>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$29.50</span>
+                </div>
+                <p class="cart-empty">Todavía no se obtuvieron cursos</p>
+            </div>
+        </div>
+        
+    </header>
+
+    <!--Main-->
+    <main>
+        <section class="pag-giftcard">
+
+            <article class="preview" id="preview">
+                <div id="valor">
+                    <p id="precio">$29.99</p>
+                </div>
+                <div class="box-preview">
+
+                    <i class='bx bx-gift'></i>
+                    <hr>
+                    <p>GIFT-CARD Para:</p>
+                    <h5 id="titulo"></h5>
+                    
+                </div>
+            </article>
+            
+            <article class="edit" id="edit">
+                <form action="">
+                    <h3>Personalización de Giftcard</h3>
+                    <input type="text" id="texto" placeholder="Nombre de destinatario" required>
+    
+                    <h5>Color del texto:</h5>
+                    <input type="radio" id="negro" name="colorText" value="black" checked>
+                    <label for="negro">Negro</label>
+                    <input type="radio" id="blanco" name="colorText" value="white">
+                    <label for="blanco">Blanco</label>
+                    <input type="radio" id="rojo" name="colorText" value="red">
+                    <label for="rojo">Rojo</label>
+                    <input type="radio" id="amarillo" name="colorText" value="yellow">
+                    <label for="amarillo">Amarillo</label>
+                    <input type="radio" id="naranja" name="colorText" value="orange">
+                    <label for="naranja">Naranja</label>
+    
+                    <h5>Tamaño de fuente:</h5>
+                    <input type="radio" id="size20" name="size" value="20px">
+                    <label for="size20">20px</label>
+                    <input type="radio" id="size28" name="size" value="28px" checked>
+                    <label for="size28">28px</label>
+                    <input type="radio" id="size32" name="size" value="32px">
+                    <label for="size32">32px</label>
+                    <input type="radio" id="size48" name="size" value="48px">
+                    <label for="size48">48px</label>
+                    <input type="radio" id="size60" name="size" value="60px">
+                    <label for="size60">60px</label>
+    
+                    <div>
+                        <h5>Monto:</h5>
+                        <label>$<input type="number" id="monto" placeholder="Ingrese el monto" value=""></label>
+                    </div>
+                    
+                    <h5>Ubicación:</h5>
+                    
+                    <input id="ubi-l" type="radio" name="ubicacion" value="baseline">
+                    <label for="ubi-l"><img src="img/ubicacion-gift3.png"></label>
+                    
+                    <input id="ubi-c" type="radio" name="ubicacion" value="center">
+                    <label for="ubi-c"><img src="img/ubicacion-gift.png"></label>
+    
+                    
+                    <input id="ubi-d" type="radio" name="ubicacion" value="end" checked>
+                    <label for="ubi-d"><img src="img/ubicacion-gift2.png"></label>
+    
+                    <h5>Color de fondo:</h5>
+                    <select name="fondo" id="fondo">
+                        <option value="" selected disabled hidden>Seleccione un color</option>
+                        <option value="red">Rojo</option>
+                        <option value="green">Verde</option>
+                        <option value="blue">Azul</option>
+                        <option value="gray">Gris</option>
+                        <option value="#7000f0">Violeta</option>
+                        <option value="white">Restablecer</option>
+                    </select>
+                    <div class="btn-confirmar">
+                        <button type="submit" id="btnConfirmar" onclick="mensaje()">CONFIRMAR</button>
+                    </div>
+                </form>
+
+
+            </article>
+        </section>
+        
+    </main>
+
+     <!--Footer-->
+    <footer>
+        <section class="footer" id="footer">
+            <div class="main-footer">
+                <article>
+                    <div class="container-footer">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt' ></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook' ></i>Facebook</a></li>
+                        <li><a href="https://www.twitter.com/" target="_blank"><i class='bx bxl-twitter' ></i>Twitter</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="calendario.html">Calendario</a></li>
+                        <li><a href="#">GiftCard</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><p>Programación Web I </p></li>
+                        <li><p>Facundo Agustin Varela</p></li>
+                        <li><p>favarela@alumno.unlam.edu.ar</p></li>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </footer>
+
+<script src="js/giftcard.js"></script>
+<script src="js/index.js"></script>
+<script src="js/carrito.js"></script>
+</body>
+</html>

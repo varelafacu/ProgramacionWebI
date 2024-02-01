@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/png" href="./img/logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilospopup.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Inscripción</title>
+</head>
+<body>
+    
+    <!--Header-->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="giftcard.html">GiftCard</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div>
+            <div class="header-icons">
+                <a class="user-icon"><i class='bx bx-user'></i></a>
+                <a class="cart-icon"><i class='bx bx-cart' ></i></a>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Curso SQL</p>
+                            <span class="precio-producto-carrito">$29.50</span>
+                        </div>
+                        <a class="icon-close"><i class='bx bx-x'></i></a>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$29.50</span>
+                </div>
+                <p class="cart-empty">Todavía no se obtuvieron cursos</p>
+            </div>
+        </div>
+        
+    </header>
+
+
+    <!--MAIN-->
+    <main>
+        <section id="inscripcion" class="container-inscr">
+
+            <div class="text-center">
+                <h2>Curso Completo De SQL 2023</h2>
+                <h5>Inscripción</h5>
+            </div>
+
+            <section id="formulario">
+                <form action="" id="formAlumnos">
+                    <div id="inscri" class="form-inscr">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                        <input type="number" id="dni" name="dni" placeholder="DNI">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <input type="text" id="telefono" name="telefono" placeholder="Nro. de Télefono">
+                        <button type="button" class="restar" onclick="disminuir();"><p>-</p></button>
+                    </div>
+                </form>
+            </section>
+            
+            <article class="addPersona">
+                <button id="add" onclick="sumar();">+</button>
+                <p>Agregar persona</p>
+            </article>
+            <article class="inscripcionPrecio">
+                <p id="mostrador">$29.5</p>
+                <input type="submit" id="open" name="open" onclick="addAlumno()" value="INSCRIBIRSE"/>
+            </article>
+
+        </section>
+
+        <!--PopUp-->
+        <section class="modal-container" id="modal_container">
+            <div id="modal" class="modal">
+                <div >
+                    <table>
+                        <thead>
+                            <h1>PERSONAS INSCRIPTAS:</h1><br>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="tablaAlumnos">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <button id="close">Cerrar</button>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <!--Footer-->
+    <footer>
+        <section class="footer" id="footer">
+            <div class="main-footer">
+                <article>
+                    <div class="container-footer">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt' ></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook' ></i>Facebook</a></li>
+                        <li><a href="https://www.twitter.com/" target="_blank"><i class='bx bxl-twitter' ></i>Twitter</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="calendario.html">Calendario</a></li>
+                        <li><a href="giftcard.html">GiftCard</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="container-footer">
+                        <li><p>Programación Web I </p></li>
+                        <li><p>Facundo Agustin Varela</p></li>
+                        <li><p>favarela@alumno.unlam.edu.ar</p></li>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/inscripcion.js"></script>
+</body>
+</html>
